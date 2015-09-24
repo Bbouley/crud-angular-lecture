@@ -18,7 +18,7 @@ var app = express();
 
 
 // *** static directory *** //
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 
 
 // *** config middleware *** //
@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, '../client/public')));
 // *** main routes *** //
 app.use('/api/v1/', apiRoutes);
 app.use('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/views', 'index.html'));
 });
 
 
