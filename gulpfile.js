@@ -31,7 +31,7 @@ gulp.task('css', function(){
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
   gulp.watch('client/public/js/*.js', ['jshint']);
-  gulp.watch('client/public/html/*.html', ['html']);
+  gulp.watch('client/views/*.html', ['html']);
   gulp.watch('client/public/css/*.css', ['css']);
   //this is saying on change to javascript files run jshint
 });
